@@ -4,8 +4,8 @@ from urls import *
 DEBUG = True
 
 COMMENT                    = "ec2 pub ipv4 autoupdate"
-CLOUDFLARE_DNS_EDIT_APIKEY = "paste api token here"
 CLOUDFLARE_ZONEID          = "paste zone id here"
+CLOUDFLARE_DNS_EDIT_APIKEY = "paste api token here"
 
 TARGET_DNSINFOS = [
 {
