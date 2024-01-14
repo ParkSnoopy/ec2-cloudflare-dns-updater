@@ -1,17 +1,14 @@
 from urls import *
 
 
-<<<<<<< HEAD
 CLOUDFLARE_DNS_EDIT_APIKEY = "paste cloudflare api token here"
 CLOUDFLARE_ZONEID = "paste zone id here"
-=======
+
 DEBUG = True
->>>>>>> a67fff0 (minor upgrade)
 
 COMMENT                    = "ec2 pub ipv4 autoupdate"
 CLOUDFLARE_DNS_EDIT_APIKEY = "paste api token here"
 CLOUDFLARE_ZONEID          = "paste zone id here"
-
 
 TARGET_DNSINFOS = [
 {
