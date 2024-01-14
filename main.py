@@ -1,7 +1,5 @@
 #!venv/bin/python3
 
-import sys
-
 from update import *
 
 
