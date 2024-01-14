@@ -1,9 +1,6 @@
 from urls import *
 
 
-CLOUDFLARE_DNS_EDIT_APIKEY = "paste cloudflare api token here"
-CLOUDFLARE_ZONEID          = "paste zone id here"
-
 DEBUG = True
 
 COMMENT                    = "ec2 pub ipv4 autoupdate"
