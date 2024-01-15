@@ -10,7 +10,7 @@ Dns update script for Amazon EC2 Instance
 
 ## Disclaimer
 
-This project is personal hobby project
+This project is just personal hobby project
 
 
 ## Deployment
@@ -19,6 +19,7 @@ This project is personal hobby project
 > which is file `config.py.example` renamed into
 
 To deploy this project, 
+
 
 1. Clone Repository
 
@@ -36,24 +37,29 @@ gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
 
 6. Replace value `CLOUDFLARE_DNS_EDIT_APIKEY = "paste cloudflare api token here"`
 
-7. Change `'name'` of each `TARGET_DNSINFOS` to your domain name
+7. Change `'name'` of each `TARGET_DNSINFOS` into **Your Domain Name**
 
 8. Change `COMMENT` or `'tags'` if you want to
 
-9. make virtual environment and install dependencies
+9. make virtual environment and install dependencies by
 
 ```bash
 # Since `run.sh` optimized for venv name `venv`, use name `venv`
 python3 -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+deactivate
 ```
 
 9. run script
 
 ```bash
-chmod +x ./main.py
-```
-```bash
-./main.py
+chmod +x ./run.sh
+
+./run.sh
 ```
 
 10. if DNS record changed seamlessly, add to crontab
@@ -62,6 +68,8 @@ chmod +x ./main.py
 crontab -e
 ```
 
+and add line
+
 ```nano
-@reboot /path/to/repository/main.py
+@reboot /path/to/repository/run.sh
 ```
