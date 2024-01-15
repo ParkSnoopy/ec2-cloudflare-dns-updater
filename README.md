@@ -62,7 +62,7 @@ chmod +x ./run.sh
 ./run.sh
 ```
 
-10. if DNS record changed seamlessly, add to crontab
+10. if script run without error, add script to crontab
 
 ```bash
 crontab -e
