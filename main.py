@@ -1,4 +1,4 @@
-from update import *
+from post_init import *
 
 
 def main():
@@ -11,12 +11,13 @@ def main():
     if dns_list := get_cloudflare_dns_list():
         extracted_id_record = extract_cloudflare_dns_record_id(dns_list, TARGET_DNSINFOS)
     else:
-        _debug("  ERR : fetch Cloudflare DNS list failed")
+        debug("  ERR : fetch Cloudflare DNS list failed")
         return 1
     for record_id, body in extracted_id_record:
         if not update_cloudflare_dns(record_id, body):
-            _debug("  ERR : update Cloudflare DNS failed")
+            debug("  ERR : update Cloudflare DNS failed")
             return 1
+
 if __name__ == "__main__":
     print("Update Cloudflare DNS")
     if not main():

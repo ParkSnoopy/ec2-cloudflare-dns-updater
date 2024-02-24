@@ -1,34 +1,39 @@
 import requests
 import json
 
-from complete import *
+from config import *
+
+CLOUDFLARE_API_HEADER = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {CLOUDFLARE_DNS_EDIT_APIKEY}",
+}
 
 
-def _debug(*args, **kwargs):
+def debug(*args, **kwargs):
     if DEBUG:
         print(*args, **kwargs)
 
 def get_aws_ec2_token():
-    _debug(f"  PUT : {AWS_EC2_METADATA_URL}")
+    debug(f"  PUT : {AWS_EC2_METADATA_URL}")
     AWS_EC2_METADATA_HEADER = {"X-aws-ec2-metadata-token-ttl-seconds": "21600"}
     aws_ec2_token = requests.put(AWS_EC2_METADATA_URL, headers=AWS_EC2_METADATA_HEADER).text
-    _debug(f"  RESP: TOKEN={aws_ec2_token[:5]}...")
+    debug(f"  RESP: TOKEN={aws_ec2_token[:5]}...")
     return aws_ec2_token
 
 def get_aws_ec2_pubip4(aws_ec2_token):
-    _debug(f"  GET : {AWS_EC2_PUB_IPv4_URL}")
+    debug(f"  GET : {AWS_EC2_PUB_IPv4_URL}")
     AWS_EC2_PUB_IPv4_HEADER = {"X-aws-ec2-metadata-token": aws_ec2_token}
     pub_ipv4 = requests.get(AWS_EC2_PUB_IPv4_URL, headers=AWS_EC2_PUB_IPv4_HEADER).text
-    _debug(f"  RESP: pub_IPv4={pub_ipv4}")
+    debug(f"  RESP: pub_IPv4={pub_ipv4}")
     return pub_ipv4
 
 def get_cloudflare_dns_list():
-    _debug(f"  GET : {CLOUDFLARE_DNS_LIST_URL}")
+    debug(f"  GET : {CLOUDFLARE_DNS_LIST_URL}")
     cloudflare_dns_list = requests.get(
         CLOUDFLARE_DNS_LIST_URL.format(zoneid=CLOUDFLARE_ZONEID),
         headers=CLOUDFLARE_API_HEADER,
     ).json()
-    _debug(f"  RESP: success={cloudflare_dns_list['success']}")
+    debug(f"  RESP: success={cloudflare_dns_list['success']}")
     if cloudflare_dns_list['success']:
     	return cloudflare_dns_list['result']
     return None
@@ -53,13 +58,13 @@ def update_cloudflare_dns(record_id, body):
     # targets: list of DNS info dict in `config.py`
     # content: ip address to change record into
 
-    _debug(f"  PUT : {CLOUDFLARE_DNS_UPDATE_URL}")
+    debug(f"  PUT : {CLOUDFLARE_DNS_UPDATE_URL}")
     update_response = requests.put(
         CLOUDFLARE_DNS_UPDATE_URL.format(zoneid=CLOUDFLARE_ZONEID, recordid=record_id),
         headers=CLOUDFLARE_API_HEADER,
         json=body,
     ).json()
-    _debug(f"  RESP: success={update_response['success']}")
+    debug(f"  RESP: success={update_response['success']}")
     if update_response['success']:
         return update_response['result']
     return None
