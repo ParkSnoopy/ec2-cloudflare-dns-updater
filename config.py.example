@@ -1,0 +1,17 @@
+
+DEBUG = True
+
+COMMENT                    = "ec2 pub ipv4 autoupdate"
+CLOUDFLARE_ZONEID          = ""
+CLOUDFLARE_DNS_EDIT_APIKEY = ""
+
+TARGET_DNSINFOS = [
+{
+	"name": "subdomain.example.com",
+	"proxied": False,
+	"type": "A",
+	"comment": COMMENT,
+	"tags": [],
+	"ttl": 1,
+},
+]
