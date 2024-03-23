@@ -1,4 +1,4 @@
-from post_init import *
+from init import *
 
 
 def main():
