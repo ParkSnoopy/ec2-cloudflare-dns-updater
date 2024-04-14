@@ -44,10 +44,10 @@ gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
 9. make virtual environment and install dependencies by
 
 ```bash
-# Since `run.sh` optimized for venv name `venv`, use name `venv`
-python3 -m venv venv
+# Since `run.sh` optimized for venv name `.venv`, use name `.venv`
+python3 -m venv .venv
 
-source venv/bin/activate
+source .venv/bin/activate
 
 pip install -r requirements.txt
 
