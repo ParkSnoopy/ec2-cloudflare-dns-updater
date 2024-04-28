@@ -20,11 +20,12 @@ This project is just personal hobby project
 
 <br/>
 <br/>
----
 
 ### To deploy this project, 
+
 <br/>
 <br/>
+
 1. Clone Repository
 ```bash
 gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
