@@ -41,13 +41,13 @@ mv config.py.example config.py
 <br/>
 
 3. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) > Overview > Copy Zone ID \
-   Update config.py `CLOUDFLARE_ZONEID = " /* paste zone id here */ "`
+   Update config.py `CLOUDFLARE_ZONEID`
 
 <br/>
 <br/>
 
 4. Create API token according to [this Cloudflare Docs](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/) \
-   Update config.py `CLOUDFLARE_DNS_EDIT_APIKEY = " /* paste cloudflare api token here */ "`
+   Update config.py `CLOUDFLARE_DNS_EDIT_APIKEY`
 
 <br/>
 <br/>
