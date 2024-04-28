@@ -24,8 +24,8 @@ This project is just personal hobby project
 ```bash
 gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
 ```
-  
-  
+<br/>
+<br/>
 2. Rename `config.py.example` to `config.py`
   
   
