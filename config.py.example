@@ -2,8 +2,8 @@
 DEBUG = True
 
 COMMENT                    = "ec2 pub ipv4 autoupdate"
-CLOUDFLARE_ZONEID          = "paste zone id here"
-CLOUDFLARE_DNS_EDIT_APIKEY = "paste cloudflare api token here"
+CLOUDFLARE_ZONEID          = " /* paste zone id here */ "
+CLOUDFLARE_DNS_EDIT_APIKEY = " /* paste cloudflare api token here */ "
 
 TARGET_DNSINFOS = [
 {
