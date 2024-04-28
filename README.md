@@ -47,12 +47,14 @@ gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
 
 4. Create API token according to [this Cloudflare Docs](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/) \
    Replace value `CLOUDFLARE_DNS_EDIT_APIKEY = " /* paste cloudflare api token here */ "`
+
 <br/>
-<br/>
+
 5. Change `'name'` of each `TARGET_DNSINFOS` into **Your Domain Name**
 >  Change `COMMENT` or `'tags'` if you want to
+
 <br/>
-<br/>
+
 6. run script
 ```bash
 chmod +x ./init.sh
@@ -61,8 +63,9 @@ chmod +x ./init.sh
 chmod +x ./update.sh
 ./update.sh
 ```
+
 <br/>
-<br/>
+
 7. add script to crontab
 ```bash
 crontab -e
