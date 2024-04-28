@@ -41,35 +41,21 @@ gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
 
 8. Change `COMMENT` or `'tags'` if you want to
 
-9. make virtual environment and install dependencies by
-
-```bash
-# Since `run.sh` optimized for venv name `venv`, use name `venv`
-python3 -m venv venv
-
-source venv/bin/activate
-
-pip install -r requirements.txt
-
-deactivate
-```
-
 9. run script
 
 ```bash
-chmod +x ./run.sh
+chmod +x ./init.sh
+./init.sh
 
+chmod +x ./run.sh
 ./run.sh
 ```
 
-10. if script run without error, add script to crontab
+10. add script to crontab
 
 ```bash
 crontab -e
 ```
-
-and add line
-
 ```nano
 @reboot /path/to/repository/run.sh
 ```
