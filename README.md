@@ -60,10 +60,7 @@ mv config.py.example config.py
 
 6. run script
 ```bash
-chmod +x ./init.sh
 ./init.sh
-
-chmod +x ./update.sh
 ./update.sh
 ```
 
