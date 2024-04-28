@@ -19,11 +19,9 @@ This project is just personal hobby project
 > which is file `config.py.example` renamed into
 
 <br/>
-<br/>
 
 ### To deploy this project, 
 
-<br/>
 <br/>
 
 1. Clone Repository
@@ -49,10 +47,12 @@ gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
    Replace value `CLOUDFLARE_DNS_EDIT_APIKEY = " /* paste cloudflare api token here */ "`
 
 <br/>
+<br/>
 
 5. Change `'name'` of each `TARGET_DNSINFOS` into **Your Domain Name**
 >  Change `COMMENT` or `'tags'` if you want to
 
+<br/>
 <br/>
 
 6. run script
@@ -64,6 +64,7 @@ chmod +x ./update.sh
 ./update.sh
 ```
 
+<br/>
 <br/>
 
 7. add script to crontab
