@@ -47,8 +47,8 @@ gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
 chmod +x ./init.sh
 ./init.sh
 
-chmod +x ./run.sh
-./run.sh
+chmod +x ./update.sh
+./update.sh
 ```
 
 10. add script to crontab
@@ -57,5 +57,5 @@ chmod +x ./run.sh
 crontab -e
 ```
 ```nano
-@reboot /path/to/repository/run.sh
+@reboot /path/to/repository/update.sh
 ```
