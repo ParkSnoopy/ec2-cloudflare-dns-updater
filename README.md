@@ -1,7 +1,7 @@
 
 # AWS EC2 - Cloudflare DNS Updater
 
-Dns update script for Amazon EC2 Instance
+DNS update script for Amazon EC2 Instance
 
 
 ### Test Environment
@@ -10,7 +10,7 @@ Dns update script for Amazon EC2 Instance
 
 ## Disclaimer
 
-This project is just personal hobby project
+This project is just a personal hobby project
 
 
 ## Deployment
@@ -26,25 +26,28 @@ This project is just personal hobby project
 
 1. Clone Repository
 ```bash
-gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
+git clone https://github.com/ParkSnoopy/ec2-cloudflare-dns-updater.git
 ```
 
 <br/>
 <br/>
 
 2. Rename `config.py.example` to `config.py`
+```bash
+mv config.py.example config.py
+```
 
 <br/>
 <br/>
 
 3. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/) > Overview > Copy Zone ID \
-   Replace value `CLOUDFLARE_ZONEID = " /* paste zone id here */ "`
+   Update config.py `CLOUDFLARE_ZONEID = " /* paste zone id here */ "`
 
 <br/>
 <br/>
 
 4. Create API token according to [this Cloudflare Docs](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/) \
-   Replace value `CLOUDFLARE_DNS_EDIT_APIKEY = " /* paste cloudflare api token here */ "`
+   Update config.py `CLOUDFLARE_DNS_EDIT_APIKEY = " /* paste cloudflare api token here */ "`
 
 <br/>
 <br/>
