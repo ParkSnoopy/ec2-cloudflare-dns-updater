@@ -2,12 +2,12 @@
 DEBUG = True
 
 COMMENT                    = "ec2 pub ipv4 autoupdate"
-CLOUDFLARE_ZONEID          = ""
-CLOUDFLARE_DNS_EDIT_APIKEY = ""
+CLOUDFLARE_ZONEID          = " /* paste zone id here */ "
+CLOUDFLARE_DNS_EDIT_APIKEY = " /* paste cloudflare api token here */ "
 
 TARGET_DNSINFOS = [
 {
-	"name": "subdomain.example.com",
+	"name": "dev.example.com",
 	"proxied": False,
 	"type": "A",
 	"comment": COMMENT,

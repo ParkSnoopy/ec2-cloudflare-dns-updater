@@ -1,4 +1,4 @@
-from init import *
+from mod import *
 
 
 def main():
