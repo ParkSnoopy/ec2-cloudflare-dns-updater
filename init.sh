@@ -6,7 +6,7 @@ SCRIPTPATH=$(dirname "$SCRIPT")
 if [ $(dpkg-query -W -f='${Status}' python3-venv 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
   echo "python3-venv not installed"
-  sudo apt-get install python3-venv;
+  apt-get install python3-venv;
 else
   echo "python3-venv already installed"
 fi
@@ -14,6 +14,7 @@ fi
 if [ $(dpkg-query -W -f='${Status}' python3-venv 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
   echo "python3-venv still not installed"
+  echo "try run with sudo"
   exit 1
 fi
 
