@@ -18,10 +18,13 @@ This project is just personal hobby project
 > All configuration is done in `config.py`
 > which is file `config.py.example` renamed into
 
+<br/>
+<br/>
 ---
 
 ### To deploy this project, 
-
+<br/>
+<br/>
 1. Clone Repository
 ```bash
 gh repo clone ParkSnoopy/aws-ec2-cloudflare-dns-updater
