@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from mod import *
 
 
@@ -14,6 +16,10 @@ def main():
         debug("  ERR : fetch Cloudflare DNS list failed")
         return 1
     for record_id, body in extracted_id_record:
+
+        if body.get("comment"):
+            body["comment"] = datetime.now().strftime(TIME_FORMAT) + " : " + body.get("comment", "none")
+
         if not update_cloudflare_dns(record_id, body):
             debug("  ERR : update Cloudflare DNS failed")
             return 1
