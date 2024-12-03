@@ -1,0 +1,19 @@
+
+DEBUG = True
+
+COMMENT                    = "ec2 pub ipv4 autoupdate"
+CLOUDFLARE_ZONEID          = " /* paste zone id here */ "
+CLOUDFLARE_DNS_EDIT_APIKEY = " /* paste cloudflare api token here */ "
+
+TIME_FORMAT = "%m/%d/%y %H:%M:%S"
+
+TARGET_DNSINFOS = [
+{
+	"name": "dev.example.com",
+	"proxied": False,
+	"type": "A",
+	"comment": COMMENT,
+	"tags": [],
+	"ttl": 1,
+},
+]
