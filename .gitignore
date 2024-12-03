@@ -1,4 +1,10 @@
+# build cache
 *.pyc
+dist/
+poetry.lock
+
+# build env
 .venv/
 
-private/
+# private config
+config.py
