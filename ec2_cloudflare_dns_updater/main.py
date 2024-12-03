@@ -1,6 +1,7 @@
 from datetime import datetime
 
-from mod import *
+from .mod import *
+
 
 
 def main():
@@ -23,6 +24,10 @@ def main():
         if not update_cloudflare_dns(record_id, body):
             debug("  ERR : update Cloudflare DNS failed")
             return 1
+
+    return 0
+
+
 
 if __name__ == "__main__":
     print("Update Cloudflare DNS")

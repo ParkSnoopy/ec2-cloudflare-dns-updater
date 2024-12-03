@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "ec2-cloudflare-dns-updater"
+version = "0.1.0"
+description = ""
+authors = ["ParkSnoopy <117149837+ParkSnoopy@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

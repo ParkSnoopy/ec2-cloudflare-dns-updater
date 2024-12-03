@@ -1,8 +1,7 @@
 import requests
 import json
 
-from config import *
-
+from .config import *
 
 AWS_EC2_METADATA_URL = "http://169.254.169.254/latest/api/token"
 AWS_EC2_PUB_IPv4_URL = "http://169.254.169.254/latest/meta-data/public-ipv4"
@@ -14,6 +13,7 @@ CLOUDFLARE_API_HEADER = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {CLOUDFLARE_DNS_EDIT_APIKEY}",
 }
+
 
 
 def debug(*args, **kwargs):
